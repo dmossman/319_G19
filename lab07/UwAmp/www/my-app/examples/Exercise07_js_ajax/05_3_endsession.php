@@ -4,6 +4,7 @@
 <body>
 
 <?php
+  session_start();
   // CHECK THAT SESSION IS ACTIVE
   echo "<h1>BEFORE destroying session</h1>";
   var_dump($_SESSION);

@@ -30,3 +30,59 @@
 [Sat Mar 12 13:24:18.465592 2016] [ssl:warn] [pid 9772:tid 416] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
 [Sat Mar 12 13:24:18.465592 2016] [ssl:warn] [pid 9772:tid 416] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
 [Sat Mar 12 13:24:18.496843 2016] [mpm_winnt:notice] [pid 9772:tid 416] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 12 13:44:43.681096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP Warning:  opendir(../www,../www): The system cannot find the file specified. (code: 2) in C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php on line 137
+[Sat Mar 12 13:44:43.681096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP Stack trace:
+[Sat Mar 12 13:44:43.681096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP   1. {main}() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:0
+[Sat Mar 12 13:44:43.681096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP   2. opendir() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:137
+[Sat Mar 12 13:44:43.681096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP Warning:  opendir(../www): failed to open dir: No such file or directory in C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php on line 137
+[Sat Mar 12 13:44:43.681096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP Stack trace:
+[Sat Mar 12 13:44:43.681096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP   1. {main}() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:0
+[Sat Mar 12 13:44:43.681096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP   2. opendir() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:137
+[Sat Mar 12 13:44:43.681096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP Warning:  readdir() expects parameter 1 to be resource, boolean given in C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php on line 139
+[Sat Mar 12 13:44:43.681096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP Stack trace:
+[Sat Mar 12 13:44:43.681096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP   1. {main}() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:0
+[Sat Mar 12 13:44:43.681096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP   2. readdir() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:139
+[Sat Mar 12 13:44:43.681096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP Warning:  closedir() expects parameter 1 to be resource, boolean given in C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php on line 148
+[Sat Mar 12 13:44:43.681096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP Stack trace:
+[Sat Mar 12 13:44:43.682096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP   1. {main}() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:0
+[Sat Mar 12 13:44:43.682096 2016] [:error] [pid 9772:tid 1044] [client ::1:55604] PHP   2. closedir() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:148
+[Sat Mar 12 13:48:13.905010 2016] [:error] [pid 9772:tid 1036] [client ::1:55617] PHP Notice:  Undefined variable: _SESSION in C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\examples\\Exercise07_js_ajax\\05_3_endsession.php on line 9, referer: http://localhost:8080/my-app/examples/Exercise07_js_ajax/05_2_nextPage.php
+[Sat Mar 12 13:48:13.905010 2016] [:error] [pid 9772:tid 1036] [client ::1:55617] PHP Stack trace:, referer: http://localhost:8080/my-app/examples/Exercise07_js_ajax/05_2_nextPage.php
+[Sat Mar 12 13:48:13.905010 2016] [:error] [pid 9772:tid 1036] [client ::1:55617] PHP   1. {main}() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\examples\\Exercise07_js_ajax\\05_3_endsession.php:0, referer: http://localhost:8080/my-app/examples/Exercise07_js_ajax/05_2_nextPage.php
+[Sat Mar 12 13:48:13.905010 2016] [:error] [pid 9772:tid 1036] [client ::1:55617] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\examples\\Exercise07_js_ajax\\05_3_endsession.php on line 12, referer: http://localhost:8080/my-app/examples/Exercise07_js_ajax/05_2_nextPage.php
+[Sat Mar 12 13:48:13.905010 2016] [:error] [pid 9772:tid 1036] [client ::1:55617] PHP Stack trace:, referer: http://localhost:8080/my-app/examples/Exercise07_js_ajax/05_2_nextPage.php
+[Sat Mar 12 13:48:13.905010 2016] [:error] [pid 9772:tid 1036] [client ::1:55617] PHP   1. {main}() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\examples\\Exercise07_js_ajax\\05_3_endsession.php:0, referer: http://localhost:8080/my-app/examples/Exercise07_js_ajax/05_2_nextPage.php
+[Sat Mar 12 13:48:13.905010 2016] [:error] [pid 9772:tid 1036] [client ::1:55617] PHP   2. session_destroy() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\examples\\Exercise07_js_ajax\\05_3_endsession.php:12, referer: http://localhost:8080/my-app/examples/Exercise07_js_ajax/05_2_nextPage.php
+[Sat Mar 12 14:10:33.572171 2016] [mpm_winnt:crit] [pid 9772:tid 416] AH02538: Child: Parent process exited abruptly. Child process is ending
+[Sat Mar 12 15:06:35.655464 2016] [ssl:warn] [pid 8096:tid 376] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Mar 12 15:06:35.655464 2016] [ssl:warn] [pid 8096:tid 376] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Mar 12 15:06:35.858607 2016] [core:warn] [pid 8096:tid 376] AH00098: pid file C:/Users/Drake/Documents/319_G19/319_G19/lab07/UwAmp/bin/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Mar 12 15:06:35.967980 2016] [ssl:warn] [pid 8096:tid 376] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 12 15:06:35.967980 2016] [ssl:warn] [pid 8096:tid 376] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Mar 12 15:06:35.967980 2016] [ssl:warn] [pid 8096:tid 376] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Mar 12 15:06:37.610889 2016] [mpm_winnt:notice] [pid 8096:tid 376] AH00455: Apache/2.4.18 (Win32) OpenSSL/1.0.2f PHP/5.6.18 configured -- resuming normal operations
+[Sat Mar 12 15:06:37.610889 2016] [mpm_winnt:notice] [pid 8096:tid 376] AH00456: Server built: Jan 28 2016 09:58:25
+[Sat Mar 12 15:06:37.610889 2016] [core:notice] [pid 8096:tid 376] AH00094: Command line: 'C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\bin\\apache\\bin\\httpd.exe -d C:/Users/Drake/Documents/319_G19/319_G19/lab07/UwAmp/bin/apache -f C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\bin\\apache\\conf\\httpd.conf'
+[Sat Mar 12 15:06:37.610889 2016] [mpm_winnt:notice] [pid 8096:tid 376] AH00418: Parent: Created child process 3704
+[Sat Mar 12 15:06:38.376556 2016] [ssl:warn] [pid 3704:tid 316] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Mar 12 15:06:38.376556 2016] [ssl:warn] [pid 3704:tid 316] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Mar 12 15:06:38.610942 2016] [ssl:warn] [pid 3704:tid 316] AH01873: Init: Session Cache is not configured [hint: SSLSessionCache]
+[Sat Mar 12 15:06:38.610942 2016] [ssl:warn] [pid 3704:tid 316] AH01906: main-serveur:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sat Mar 12 15:06:38.610942 2016] [ssl:warn] [pid 3704:tid 316] AH01909: main-serveur:443:0 server certificate does NOT include an ID which matches the server name
+[Sat Mar 12 15:06:38.626570 2016] [mpm_winnt:notice] [pid 3704:tid 316] AH00354: Child: Starting 64 worker threads.
+[Sat Mar 12 15:07:55.517914 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP Warning:  opendir(../www,../www): The system cannot find the file specified. (code: 2) in C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php on line 137, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.517914 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP Stack trace:, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.517914 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP   1. {main}() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:0, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.517914 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP   2. opendir() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:137, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.518832 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP Warning:  opendir(../www): failed to open dir: No such file or directory in C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php on line 137, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.518832 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP Stack trace:, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.518832 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP   1. {main}() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:0, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.518832 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP   2. opendir() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:137, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.520388 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP Warning:  readdir() expects parameter 1 to be resource, boolean given in C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php on line 139, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.520388 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP Stack trace:, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.520388 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP   1. {main}() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:0, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.520388 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP   2. readdir() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:139, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.520388 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP Warning:  closedir() expects parameter 1 to be resource, boolean given in C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php on line 148, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.520388 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP Stack trace:, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.520388 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP   1. {main}() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:0, referer: http://localhost:8080/
+[Sat Mar 12 15:07:55.520388 2016] [:error] [pid 3704:tid 1044] [client ::1:49416] PHP   2. closedir() C:\\Users\\Drake\\Documents\\319_G19\\319_G19\\lab07\\UwAmp\\www\\my-app\\index.php:148, referer: http://localhost:8080/

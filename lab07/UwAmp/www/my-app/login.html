@@ -20,6 +20,11 @@ Password: <input id="password" type="text" name="password" value=""/><br>
 
 
 <script>
+var testObj = {title: "trial post 1", message:"I just want to see how this is formatted as a json object.",author: "Tyler", time:"3-12-16 3:05pm"};
+var testObj2 = {"title":"another post","message":"s'more text to see how this works.","author":"Drake","time":"3-12-16 3:14pm"};
+var myConvertedObject = JSON.stringify([testObj,testObj2]);
+console.log(myConvertedObject);
+
 $(document).ready(function() {
 	$("#submit").click(checkLogin);
 	
@@ -29,7 +34,7 @@ checkLogin = function() {
 	$.post("checkLogin.php", {name : $("#name").val(), password : $("#password").val()}, 
 		function(data,status) { 
 			if (data == "success") {
-				viewPosts(); // IMPLEMENT
+				viewPosts();
 			}
 			else {
 				$("#tryAgain").html('<p style="color:red;">Wrong. Try Again</p>');
@@ -37,12 +42,19 @@ checkLogin = function() {
 		}
 	);
 }
-viewPosts = function(){
-	
-}
 
-function post(url, arr, handler) {
-	$.post(url, arr, handler); 
+viewPosts = function(){
+	//replace my div with html to display posts
+	
+	$.post("viewPosts.php",
+		function(data,status){
+			var posts = JSON.parse(data);
+			//posts is an array of objects, each of which has a title, message, author, and time string
+			//get info like this: posts[0].message
+			//TODO: make some html structure with a table to display the posts
+			//$("#myDiv").html(posts[0].message);
+		}
+	);
 }
 </script>
 </body>
