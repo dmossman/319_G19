@@ -21,10 +21,10 @@ Password: <input id="password" type="text" name="password" value=""/><br>
 
 
 <script>
-var testObj = {title: "trial post 1", message:"I just want to see how this is formatted as a json object.",author: "Tyler", time:"3-12-16 3:05pm"};
-var testObj2 = {"title":"another post","message":"s'more text to see how this works.","author":"Drake","time":"3-12-16 3:14pm"};
-var myConvertedObject = JSON.stringify([testObj,testObj2]);
-console.log(myConvertedObject);
+//var testObj = {title: "trial post 1", message:"I just want to see how this is formatted as a json object.",author: "Tyler", time:"3-12-16 3:05pm"};
+//var testObj2 = {"title":"another post","message":"s'more text to see how this works.","author":"Drake","time":"3-12-16 3:14pm"};
+//var myConvertedObject = JSON.stringify([testObj,testObj2]);
+//console.log(myConvertedObject);
 
 $(document).ready(function() {
 	$("#submit").click(checkLogin);
@@ -45,26 +45,21 @@ checkLogin = function() {
 };
 function viewPosts(){
 	//replace my div with html to display posts
-	$.post("viewPosts.php",function(data,status){
-		var posts = JSON.parse(data);
-		//posts is an array of objects, each of which has a title, message, author, and time string
-		//get info like this: posts[0].message
-		//TODO: make some html structure with a table to display the posts
-		$("#signInDiv").empty();
-		$("#posts").empty();
-		$("#posts").append("<tr><td>"+
-							posts[0].title+"<br>"+
-							posts[0].author+"<br>"+
-							posts[0].time+"<br>"+
-							posts[0].message+"<br>"+
-							"<input id='button' type='button' value='Update'/><br><br></td></tr>");
-		$("#posts").append("<tr><td>"+
-							posts[1].title+"<br>"+
-							posts[1].author+"<br>"+
-							posts[1].time+"<br>"+
-							posts[1].message+"<br>"+
-							"<input id='button' type='button' value='Update'/><br><br></td></tr>");	
-		editPost(JSON.stringify(posts[0]));
+	$.post("viewPosts.php",
+		function(data,status){
+			var posts = JSON.parse(data);
+			//posts is an array of objects, each of which has a title, message, author, and time string
+			//get info like this: posts[0].message
+			//TODO: make some html structure with a table to display the posts
+			$("#signInDiv").empty();
+			for (var i=0;i<posts.length;i++) {
+				$("#posts").append("<tr><td>"+
+									posts[i].title+"<br>"+
+									posts[i].author+"<br>"+
+									posts[i].time+"<br>"+
+									posts[i].message+"<br>"+
+									"<input id=\"button"+i+"\" type=\"button\" value=\"Update\"/><br><br></td></tr>");
+			}
 	});
 };
 </script>
