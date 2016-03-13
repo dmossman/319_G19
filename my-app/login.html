@@ -5,15 +5,14 @@
 </head>
 <body>
 
-<div id="myDiv">
+<div id="mainDiv">
+<div id="signInDiv">
 Name: <input id="name" type="text" name="name" value=""/><br>
 Password: <input id="password" type="text" name="password" value=""/><br>
 <input id="submit" type="button" value="Submit"/>
-<div id="tryAgain"/>
+<div id="tryAgain"></div>
+</div>
 <table id="posts">
-<tr><td> This is the text in a single post.<input id="button1" type="button" value="Update"/></td></tr>
-<tr><td> This is the text in a single post.<input id="button2" type="button" value="Update"/></td></tr>
-<tr><td> This is the text in a single post.<input id="button3" type="button" value="Update"/></td></tr>
 </table>
 </div>
 
@@ -42,7 +41,6 @@ checkLogin = function() {
 		}
 	);
 }
-
 viewPosts = function(){
 	//replace my div with html to display posts
 	
@@ -52,7 +50,23 @@ viewPosts = function(){
 			//posts is an array of objects, each of which has a title, message, author, and time string
 			//get info like this: posts[0].message
 			//TODO: make some html structure with a table to display the posts
-			$("#myDiv").html(posts[0].message);
+			$("#signInDiv").empty();
+			
+			$("#posts").append("<tr><td>"+
+								posts[0].title+" | "+
+								posts[0].author+" | "+
+								posts[0].time+" | "+
+								posts[0].message+" | "+
+								"<input id='button' type='button' value='Update'/></td></tr>");
+			$("#posts").append("<tr><td>"+
+								posts[1].title+" | "+
+								posts[1].author+" | "+
+								posts[1].time+" | "+
+								posts[1].message+" | "+
+								"<input id='button' type='button' value='Update'/></td></tr>");
+			
+		
+		
 		}
 	);
 }
