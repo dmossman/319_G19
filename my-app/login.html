@@ -46,19 +46,12 @@ viewPosts = function(){
 	
 	$.post("viewPosts.php",
 		function(data,status){
-			var posts = JSON.parse(data);
 			//posts is an array of objects, each of which has a title, message, author, and time string
 			//get info like this: posts[0].message
 			//TODO: make some html structure with a table to display the posts
 			$("#signInDiv").empty();
-			for (var i=0;i<posts.length;i++) {
-				$("#posts").append("<tr><td>"+
-									posts[i].title+"<br>"+
-									posts[i].author+"<br>"+
-									posts[i].time+"<br>"+
-									posts[i].message+"<br>"+
-									"<input id=\"button"+i+"\" type=\"button\" value=\"Update\"/><br><br></td></tr>");
-			}
+			$("#posts").append(data);
+
 		
 	});
 };
