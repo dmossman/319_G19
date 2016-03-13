@@ -46,15 +46,13 @@ checkLogin = function() {
 viewPosts = function(){
 	//replace my div with html to display posts
 	
-	$.post("viewPosts.php",
-		function(data,status){
-			var posts = JSON.parse(data);
-			//posts is an array of objects, each of which has a title, message, author, and time string
-			//get info like this: posts[0].message
-			//TODO: make some html structure with a table to display the posts
-			$("#myDiv").html(posts[0].message);
-		}
-	);
+	$.post("viewPosts.php",function(data,status){
+		var posts = JSON.parse(data);
+		//posts is an array of objects, each of which has a title, message, author, and time string
+		//get info like this: posts[0].message
+		//TODO: make some html structure with a table to display the posts
+		$("#myDiv").html(posts[0].message);
+	});
 }
 </script>
 <script>
@@ -63,10 +61,17 @@ function makeEditDialogue(postJson){
 	var newMsg = prompt("Edit post: " + post.title + "\n" +
 	"Original post by " + post.author + " at " + post.time,
 	post.message);
-	return newMsg;
+	post.message = newMsg;
+	return post;
 }
 //makeEditDialogue(JSON.stringify(posts[0]));
-
+function editPost(postJson){
+	var post = makeEditDialogue(postJson);
+	//send a json of the updated post to server with updatePosts.php
+	$.post("updatePosts.php",post,function(data,status){
+		
+	});
+}
 </script>
 </body>
 </html>
