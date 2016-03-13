@@ -1,2 +1,1 @@
-[{"title":"trial post 1","message":"I just want to see how this is formatted as a json object.","author":"Tyler","time":"3-12-16 3:05pm","id":"post1"},
-{"title":"another post","message":"s'more text to see how this works.","author":"Drake","time":"3-12-16 3:14pm","id":"post2"}]
+[{"title":"trial post 1","message":"This message is gonna be GR-R-R-R-EEAAT!","author":"Tyler","time":"3-12-16 3:05pm","id":"post1"},{"title":"another post","message":"s'more text to see how this works.","author":"Drake","time":"3-12-16 3:14pm","id":"post2"}]
