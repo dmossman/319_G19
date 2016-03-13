@@ -40,10 +40,10 @@ checkLogin = function() {
 			}
 		}
 	);
-}
+};
 viewPosts = function(){
 	//replace my div with html to display posts
-	$.post("viewPosts.php",$.post("viewPosts.php",function(data,status){
+	$.post("viewPosts.php",function(data,status){
 		var posts = JSON.parse(data);
 		//posts is an array of objects, each of which has a title, message, author, and time string
 		//get info like this: posts[0].message
@@ -63,7 +63,7 @@ viewPosts = function(){
 							posts[1].message+"<br>"+
 							"<input id='button' type='button' value='Update'/><br><br></td></tr>");	
 	});
-}
+};
 </script>
 <script>
 function makeEditDialogue(postJson){
