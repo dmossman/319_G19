@@ -38,7 +38,7 @@ $(document).ready(function() {
 checkLogin = function() {
 	$.post("checkLogin.php", {name : $("#name").val(), password : $("#password").val()}, 
 		function(data,status) { 
-			if (data == "success") {
+			if (JSON.parse(data) == "success") {
 				viewPosts();
 			}
 			else {
@@ -47,6 +47,7 @@ checkLogin = function() {
 		}
 	);
 };
+
 function viewPosts(){
 	$.post("viewPosts.php",
 		function(data,status){
@@ -62,7 +63,8 @@ function viewPosts(){
 			}
 			//handle posts table
 			$("#posts").html(data);
-			$("#button0").click(function () {
+			$("#button0").get(0).click(function () {
+				console.log("In handler----------------------");
 				editPost($("tr").get(0));
 			});
 	});
