@@ -51,8 +51,8 @@ function viewPosts(){
 	$.post("viewPosts.php",
 		function(data,status){
 			//handle signInDiv
-			if(!$("#signInDiv").exists()){
-				$("#signInDiv").html("<input id=\"destroy\" type=\"button\" value=\"Logout\"/>");
+			if(!$("#destroy").exists()){
+				$("#signInDiv").html("<input id=\"destroy\" type=\"button\" value=\"Logout\"/><br><br>");
 				$("#destroy").click(function () {
 					$.post("logout.php", null, 
 						function(data,status) { 
@@ -92,7 +92,7 @@ function editPost(domTableRow){
 	$.post("updatePosts.php",post,function(data,status){
 		//$("#errorDiv").html(data)
 		//console.log(data);
-		//viewPosts();
+		viewPosts();
 	});
 }
 
