@@ -66,26 +66,21 @@ function viewPosts(){
 			}
 			//handle posts table
 			$("#posts").html(data);
-<<<<<<< HEAD
 			var tableSize = $('#posts tbody tr').length;
 			for (var i=0; i<tableSize; i++) {
-				$("#entry"+i).click(function () {
-					var tr = $("tr").eq(0);
-					editPost(tr);
-				});
+				$("#entry"+i).click((function () {
+					var postNum = i;
+						return function(){
+						var tr = $("tr").eq(postNum);
+						editPost(tr);
+					}
+				})());
 			}
 			//$("#entry0").click(function () {
 			//	var tr0 = $("tr").eq(0);
 			//	editPost(tr0);
 			//});
-=======
-			$("#updateButton0").click(function () {
-				var tr0 = $("tr").eq(0);
-				editPost(tr0);
-				//console.log("clicked");
-			});
 			createMakePostButton();
->>>>>>> f9039e16888b12e0b891f9105601d3f1248fe925
 	});
 };
 </script>
