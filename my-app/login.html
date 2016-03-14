@@ -119,6 +119,7 @@ var createNewPostForm = function (){
 	$("#submitCreatePost").click(function () {
 		var newPost = {title: $("#postTitle").val(), message:$("#postMsg").val(),author: "", time: new Date().toUTCString()};
 		$.post("updatePosts.php", newPost,function(data,status){
+			console.log(data);
 			viewPosts();
 			createMakePostButton();
 		});
