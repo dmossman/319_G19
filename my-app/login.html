@@ -63,7 +63,7 @@ function viewPosts(){
 			//handle posts table
 			$("#posts").html(data);
 			$("#updateButton0").click(function () {
-				//editPost($("tr").get(0));
+				editPost($("tbody tr").eq(0));
 				console.log("clicked");
 			});
 	});
@@ -72,7 +72,7 @@ function viewPosts(){
 <script>
 function makeEditDialogue(domTableRow){
 	//domTableRow is a dom element containing the post to edit
-	var td = domTableRow.find("td").get(0);
+	var td = domTableRow;
 	//var post = JSON.parse(postJson);
 	var divs = td.find("div");
 	var post = new Object();
