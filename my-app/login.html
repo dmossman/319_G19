@@ -21,6 +21,10 @@ Password: <input id="password" type="text" name="password" value=""/><br>
 
 
 <script>
+//make convenience function for jquery
+$.fn.exists = function () {
+    return this.length !== 0;
+}
 //var testObj = {title: "trial post 1", message:"I just want to see how this is formatted as a json object.",author: "Tyler", time:"3-12-16 3:05pm"};
 //var testObj2 = {"title":"another post","message":"s'more text to see how this works.","author":"Drake","time":"3-12-16 3:14pm"};
 //var myConvertedObject = JSON.stringify([testObj,testObj2]);
@@ -44,14 +48,23 @@ checkLogin = function() {
 	);
 };
 function viewPosts(){
-	//replace my div with html to display posts
 	$.post("viewPosts.php",
 		function(data,status){
-			//posts is an array of objects, each of which has a title, message, author, and time string
-			//get info like this: posts[0].message
-			//TODO: make some html structure with a table to display the posts
-			$("#signInDiv").empty();
+			//handle signInDiv
+			if(!$("#signInDiv").exists()){
+				$("#signInDiv").html("<input id=\"destroy\" type=\"button\" value=\"Logout\"/>");
+				$("#destroy").click(function () {
+					$.post("logout.php", null, 
+						function(data,status) { 
+							location.reload();
+					});
+				});
+			}
+			//handle posts table
 			$("#posts").html(data);
+			$("#button0").click(function () {
+				editPost($("tr").get(0));
+			});
 	});
 };
 </script>
