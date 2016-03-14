@@ -1,1 +1,3 @@
-sdsa
+<?php
+session_destroy();
+?>

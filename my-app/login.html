@@ -50,8 +50,18 @@ function viewPosts(){
 			//posts is an array of objects, each of which has a title, message, author, and time string
 			//get info like this: posts[0].message
 			//TODO: make some html structure with a table to display the posts
-			$("#signInDiv").empty();
+			$("#signInDiv").html("<input id=\"destroy\" type=\"button\" value=\"Logout\"/>");
+			$("#destroy").click(function () {
+				$.post("logout.php", null, 
+					function(data,status) { 
+						location.reload();
+		}
+	);
+			});
 			$("#posts").append(data);
+			$("#button0").click(function () {
+				editPost($("tr").get(0));
+			});
 	});
 };
 </script>
