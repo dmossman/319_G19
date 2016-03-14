@@ -1,1 +1,1 @@
-[{"title":"trial post 1","message":"jhkjhgkjh","author":"Tyler","time":"3-12-16 3:05pm"},{"title":"another post","message":"more text to see how this works.","author":"Drake","time":"3-12-16 3:14pm"}]
+[{"title":"trial post 1","message":"jhkjhgkjh","author":"Tyler","time":"3-12-16 3:05pm"},{"title":"another post","message":"more text to see how this works.","author":"Drake","time":"3-12-16 3:14pm"},{"title":"Dang this works!","message":"I really hope we are done and get a good grade on this","author":"Mandy","time":"Mon, 14 Mar 2016 04:42:35 GMT"}]
