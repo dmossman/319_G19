@@ -63,9 +63,9 @@ function viewPosts(){
 			}
 			//handle posts table
 			$("#posts").html(data);
-			$("#button0").get(0).click(function () {
-				console.log("In handler----------------------");
-				editPost($("tr").get(0));
+			$("#updateButton0").click(function () {
+				//editPost($("tr").get(0));
+				console.log("clicked");
 			});
 	});
 };
