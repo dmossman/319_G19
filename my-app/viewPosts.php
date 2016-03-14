@@ -9,10 +9,8 @@ $data = json_decode($posts);
 $arr = array();
 $size = count($data);
 for($i=0;$i<$size; $i++) {
-	echo "<tr><td><div>".$data[$i]->title."</div><div>".$data[$i]->author."</div><div>".
-	$data[$i]->time."</div><div>".$data[$i]->message."</div><div>".
-
-	"<input id=\"updateButton".$i."\" type=\"button\" value=\"Update\"/><br><br></td></tr>";
+	echo "<tr id=\"entry".$i."\"><td><div>".$data[$i]->title."</div><div>".$data[$i]->author."</div><div>".
+	$data[$i]->time."</div><div>".$data[$i]->message."</div><div><br><br></td></tr>";
 }
 
 ?>

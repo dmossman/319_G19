@@ -63,10 +63,17 @@ function viewPosts(){
 			}
 			//handle posts table
 			$("#posts").html(data);
-			$("#updateButton0").click(function () {
-				var tr0 = $("tr").eq(0);
-				editPost(tr0);
-			});
+			var tableSize = $('#posts tbody tr').length;
+			for (var i=0; i<tableSize; i++) {
+				$("#entry"+i).click(function () {
+					var tr = $("tr").eq(0);
+					editPost(tr);
+				});
+			}
+			//$("#entry0").click(function () {
+			//	var tr0 = $("tr").eq(0);
+			//	editPost(tr0);
+			//});
 	});
 };
 </script>
