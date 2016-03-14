@@ -66,19 +66,21 @@ function viewPosts(){
 			}
 			//handle posts table
 			$("#posts").html(data);
-			
 			var tableSize = $('#posts tbody tr').length;
 			for (var i=0; i<tableSize; i++) {
-				$("#entry"+i).click(function () {
+				$("#entry"+i).click((function () {
 					var postNum = i;
-					var tr = $("tr").eq(postNum);
-					editPost(tr);
-				});
+						return function(){
+						var tr = $("tr").eq(postNum);
+						editPost(tr);
+					}
+				})());
 			}
 			//$("#entry0").click(function () {
 			//	var tr0 = $("tr").eq(0);
 			//	editPost(tr0);
 			//});
+			createMakePostButton();
 	});
 };
 </script>
@@ -96,7 +98,10 @@ function makeEditDialogue(domTableRow){
 	var newMsg = prompt("Edit post: " + post.title + "\n" +
 	"Original post by " + post.author + " at " + post.time,
 	post.message);
-	post.message = newMsg;
+	if (newMsg != null) {
+		post.message = newMsg;
+	}
+	
 	return post;
 }
 
