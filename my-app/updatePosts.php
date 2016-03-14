@@ -13,5 +13,7 @@ $posts = json_decode(file_get_contents("posts.txt"));
 		return;
 	}
 }
+$posts[] = $_REQUEST;
+file_put_contents("posts.txt",json_encode($posts));
 //echo "-----------END OF UPDATPOSTS.PHP----------";
 ?>
