@@ -130,7 +130,9 @@ var createNewPostForm = function (){
 }
 var createMakePostButton = function (){
 	$("#createPostDiv").html("<input id=\"createPost\" type=\"button\" value=\"make a post\"/>");
-	$("#createPost").click(createNewPostForm());
+	$("#createPost").click(function (){
+		createNewPostForm();
+	});
 }
 </script>
 </body>
